@@ -12,7 +12,7 @@ impl FromStr for Command {
     type Err = ();
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let (command, value) = s.split_once(" ").unwrap();
+        let (command, value) = s.split_once(' ').unwrap();
         let value = value.parse().unwrap();
         match command {
             "forward" => Ok(Command::Forward(value)),

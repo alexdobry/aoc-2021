@@ -20,7 +20,7 @@ pub fn solve2() {
     let input = read_input();
     let result = input
         .windows(3)
-        .map(|w| w.into_iter().sum())
+        .map(|w| w.iter().sum())
         .collect::<Vec<i32>>()
         .windows(2)
         .filter(|w| w[0] < w[1])
